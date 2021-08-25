@@ -62,6 +62,14 @@ class __FormularioState extends State<_Formulario> {
   final edadController = new TextEditingController();
   final sexoController = new TextEditingController();
   late Sexo sexo = Sexo.masculino;
+
+  @override
+  void dispose() {
+    nombreController.dispose();
+    edadController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
