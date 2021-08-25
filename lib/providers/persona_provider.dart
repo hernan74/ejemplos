@@ -10,10 +10,11 @@ class PersonaProvider {
   factory PersonaProvider() {
     return _personaProvider;
   }
-  final StreamController<List<PersonaModel>> _streamPersonaController =
+
+  static final StreamController<List<PersonaModel>> _streamPersonaController =
       new StreamController.broadcast();
   List<PersonaModel> lista = [];
-  Stream<List<PersonaModel>> get streamUsersController =>
+  static Stream<List<PersonaModel>> get streamUsersController =>
       _streamPersonaController.stream;
 
   void limpiarLista() {

@@ -40,7 +40,7 @@ class _Listado extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: StreamBuilder<List<PersonaModel>>(
-            stream: PersonaProvider().streamUsersController,
+            stream: PersonaProvider.streamUsersController,
             builder: (context, snapshot) {
               if (!snapshot.hasData) return Center(child: Text('Sin datos'));
 
